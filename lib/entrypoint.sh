@@ -2,6 +2,6 @@
 
 set -e
 
-gem install rubocop
-
-ruby /action/lib/index.rb
+cd $GITHUB_WORKSPACE
+RAILS_ENV=test bundle install
+/usr/bin/env ruby /action/lib/index.rb
